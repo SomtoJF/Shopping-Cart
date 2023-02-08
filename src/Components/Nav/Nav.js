@@ -5,6 +5,7 @@ const Nav = (props) => {
 	const setIsExpanded = props.setNavIsExpanded;
 	return (
 		<button
+			className="nav-button"
 			onClick={() => {
 				isExpanded ? setIsExpanded(false) : setIsExpanded(true);
 			}}
