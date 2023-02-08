@@ -1,0 +1,48 @@
+@use '../../App'
+
+#home-main
+    display: flex
+    flex-direction: column
+    padding-bottom: 100px
+
+    #buttons
+        width: 100vw
+        height: fit-content
+        background-color: App.$primary-color
+        display: flex
+        justify-content: center
+        gap: 10px
+
+        a
+            font-family: App.$info-text-font
+            background-color: App.$secondary-color
+            color: App.$primary-color
+            border: none
+            width: 100px
+            height: 30px
+            text-decoration: underline
+            text-align: center
+
+    
+#logo
+    z-index: 1
+    margin: 0
+    margin-bottom: -10%
+    padding: 0
+    max-width: 100vw
+    font-size: 18rem
+    font-family: App.$logo-font
+    align-self: center
+    font-weight: 600
+
+#homepage-image
+    background-image: url('https://images.pexels.com/photos/5710990/pexels-photo-5710990.jpeg')
+    background-repeat: no-repeat
+    background-size: cover
+    width: 100vw
+    height: 50vh
+    align-self: center
+    box-sizing: border-box
+
+#intro-text
+    font-family: App.$info-text-font
