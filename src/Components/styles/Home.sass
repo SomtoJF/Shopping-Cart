@@ -14,14 +14,8 @@
         gap: 10px
 
         a
-            font-family: App.$info-text-font
-            background-color: App.$secondary-color
-            color: App.$primary-color
-            border: none
-            width: 100px
-            height: 30px
-            text-decoration: underline
-            text-align: center
+            @include App.link($width: 100px)
+            
 
     
 #logo
@@ -43,6 +37,19 @@
     height: 50vh
     align-self: center
     box-sizing: border-box
+    display: flex
+    align-items: flex-end
+    figcaption
+        @include App.link
+    a:visited
+        color: App.$primary-color
+        
 
 #intro-text
     font-family: App.$info-text-font
+    margin: 15px 0px
+
+@media all and (min-width: 1300px) 
+    #homepage-image
+        figcaption
+            padding-left: 10px
