@@ -7,7 +7,14 @@ const Nav = (props) => {
 		<button
 			className="nav-button"
 			onClick={() => {
-				isExpanded ? setIsExpanded(false) : setIsExpanded(true);
+				const navOverlay = document.getElementById("layer");
+				if (isExpanded) {
+					setIsExpanded(false);
+					navOverlay.style.left = "-80vw";
+				} else {
+					setIsExpanded(true);
+					navOverlay.style.left = "0vw";
+				}
 			}}
 		>
 			{isExpanded ? "CLOSE" : "MENU"}
