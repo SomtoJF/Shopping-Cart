@@ -23,8 +23,8 @@
     margin: 0
     margin-bottom: -10%
     padding: 0
-    max-width: 100vw
-    font-size: 18rem
+    width: fit-content
+    font-size: 50vw
     font-family: App.$logo-font
     align-self: center
     font-weight: 600
@@ -49,7 +49,21 @@
     font-family: App.$info-text-font
     margin: 15px 0px
 
+@media all and (min-width: 500px) 
+    #logo
+        font-size: 40vw
+
 @media all and (min-width: 1300px) 
+    #logo
+        font-size: 30vw
     #homepage-image
         figcaption
             padding-left: 10px
+
+
+@media all and (max-width: 1000px) 
+    #logo
+        word-break: normal
+        height: 60vh
+        margin-bottom: -60%
+        align-self: flex-start
