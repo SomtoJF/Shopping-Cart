@@ -8,6 +8,16 @@ $logo-font: 'Six Caps',sans-serif
 $navbar-font: 'Lato', sans-serif
 $info-text-font: 'Prosto One', cursive
 
+@mixin link($width: fit-content)
+  font-family: $info-text-font
+  background-color: $secondary-color
+  color: $primary-color
+  border: none
+  height: 30px
+  text-decoration: underline
+  text-align: center
+  width: $width
+
 :root
   background-color: $primary-color
   color: $secondary-color
