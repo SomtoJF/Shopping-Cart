@@ -4,7 +4,7 @@ import "../Components/styles/Home.sass";
 const Home = () => {
 	return (
 		<main id="home-main">
-			<h1 id="logo">SQUAD</h1>
+			<h1 id="logo">OUT SPOKEN</h1>
 			<figure id="homepage-image" alt="image">
 				<figcaption>
 					<a href="https://www.pexels.com/photo/grayscale-photo-of-a-young-man-in-a-crewneck-sweatshirt-5710990/">
