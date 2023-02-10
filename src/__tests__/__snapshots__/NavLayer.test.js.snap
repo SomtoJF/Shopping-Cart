@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav Overlay Matches Snapshot 1`] = `
+<div>
+  <aside
+    id="layer"
+  >
+    <ul>
+      <li>
+        <a
+          href="/"
+        >
+          HOME
+        </a>
+      </li>
+      <li>
+        <a
+          href="/products"
+        >
+          PRODUCTS
+        </a>
+      </li>
+      <li>
+        <a
+          href="/cart"
+        >
+          CART
+        </a>
+      </li>
+    </ul>
+  </aside>
+</div>
+`;
