@@ -8,15 +8,11 @@ import { useState } from "react";
 import NavLayer from "./Components/Nav/NavLayer";
 
 function App() {
-	const [navIsExpanded, setNavIsExpanded] = useState(false);
 	return (
 		<div className="App">
 			<BrowserRouter>
-				<Nav
-					navIsExpanded={navIsExpanded}
-					setNavIsExpanded={setNavIsExpanded}
-				/>
-				<NavLayer navIsExpanded={navIsExpanded} />
+				<Nav />
+				<NavLayer />
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/products" element={<Products />} />
