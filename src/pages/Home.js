@@ -7,18 +7,18 @@ const Home = () => {
 			<h1 id="logo">OUT SPOKEN</h1>
 			<figure id="homepage-image" alt="image">
 				<figcaption>
-					<a href="https://www.pexels.com/photo/grayscale-photo-of-a-young-man-in-a-crewneck-sweatshirt-5710990/">
-						Pexels
+					<a href="https://www.pexels.com/@anastasiia-chaikovska-206547003/">
+						Anastasiia Chaikovska
 					</a>
 				</figcaption>
 			</figure>
 			<article id="intro-text">
-				<b>COME AS YOU ARE</b> - this is what we believe in. Since 2016, Lorem
-				ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique ipsum
-				eu blandit pharetra. Praesent a ornare neque. Duis laoreet magna id
-				pretium finibus. Vestibulum ut urna volutpat, mollis nunc eu, varius
-				augue. Etiam imperdiet, arcu vitae cursus commodo, purus enim imperdiet
-				massa, quis faucibus nisi quam vel enim. Vestibulum.
+				<b>BE HEARD! BE STRONG! BE PROUD!</b> - this is what we believe in.
+				Since 2016, Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Donec tristique ipsum eu blandit pharetra. Praesent a ornare neque. Duis
+				laoreet magna id pretium finibus. Vestibulum ut urna volutpat, mollis
+				nunc eu, varius augue. Etiam imperdiet, arcu vitae cursus commodo, purus
+				enim imperdiet massa, quis faucibus nisi quam vel enim. Vestibulum.
 			</article>
 			<div id="buttons">
 				<Link to="/products">Shop Now</Link>
