@@ -1,23 +1,23 @@
 import "../../styles/Nav.sass";
+import { useState } from "react";
 
-const Nav = (props) => {
-	const isExpanded = props.navIsExpanded;
-	const setIsExpanded = props.setNavIsExpanded;
+const Nav = () => {
+	const [navIsExpanded, setNavIsExpanded] = useState(false);
 	return (
 		<button
 			className="nav-button"
 			onClick={() => {
 				const navOverlay = document.getElementById("layer");
-				if (isExpanded) {
-					setIsExpanded(false);
+				if (navIsExpanded) {
+					setNavIsExpanded(false);
 					navOverlay.style.left = "-80vw";
 				} else {
-					setIsExpanded(true);
+					setNavIsExpanded(true);
 					navOverlay.style.left = "0vw";
 				}
 			}}
 		>
-			{isExpanded ? "CLOSE" : "MENU"}
+			{navIsExpanded ? "CLOSE" : "MENU"}
 		</button>
 	);
 };

@@ -2,16 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/NavLayer.sass";
 
-const NavLayer = (props) => {
-	const isExpanded = props.navIsExpanded;
-
-	useEffect(() => {
-		const layer = document.getElementById("layer");
-		isExpanded
-			? layer.classList.add("expand")
-			: layer.classList.remove("expand");
-	}, [isExpanded]);
-
+const NavLayer = () => {
 	return (
 		<aside id="layer">
 			<ul>
