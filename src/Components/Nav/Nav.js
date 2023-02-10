@@ -1,4 +1,4 @@
-import "../styles/Nav.sass";
+import "../../styles/Nav.sass";
 
 const Nav = (props) => {
 	const isExpanded = props.navIsExpanded;

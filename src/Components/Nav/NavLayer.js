@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../styles/NavLayer.sass";
+import "../../styles/NavLayer.sass";
 
 const NavLayer = (props) => {
 	const isExpanded = props.navIsExpanded;

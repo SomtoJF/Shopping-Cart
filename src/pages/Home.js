@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../Components/styles/Home.sass";
+import "../styles/Home.sass";
 
 const Home = () => {
 	return (
