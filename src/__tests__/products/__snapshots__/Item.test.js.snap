@@ -31,6 +31,15 @@ exports[`Item Component displays an item accurately 1`] = `
           </div>
         </li>
         <li>
+          <div>
+            Price
+          </div>
+          <div>
+            $
+            1000
+          </div>
+        </li>
+        <li>
           More Information...
         </li>
       </ul>

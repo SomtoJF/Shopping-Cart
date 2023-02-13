@@ -10,6 +10,7 @@ describe("Item Component", () => {
 			src: "www.somto.me/something.jpg",
 			alt: "reach for the moon, aim for the stars",
 			photographer: "SomtoJF",
+			price: 1000,
 		};
 
 		const { container } = render(<Item product={anItem} />, {
