@@ -4,10 +4,19 @@ import Nav from "./Components/Nav/Nav";
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NavLayer from "./Components/Nav/NavLayer";
+import fetchedProducts from "./API/FetchProducts";
 
 function App() {
+	const [products, setProducts] = useState([]);
+	useEffect(() => {
+		async function initializeProducts() {
+			const myProducts = await fetchedProducts();
+			setProducts(myProducts);
+		}
+		initializeProducts();
+	}, []);
 	return (
 		<div className="App">
 			<BrowserRouter>
@@ -15,7 +24,7 @@ function App() {
 				<NavLayer />
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="/products" element={<Products />} />
+					<Route path="/products" element={<Products products={products} />} />
 					<Route path="/cart" element={<Cart />} />
 				</Routes>
 			</BrowserRouter>
