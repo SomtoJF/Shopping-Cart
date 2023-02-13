@@ -1,7 +1,23 @@
 @use '../../App'
 
-#products-header
-    background-color: inherit
-    color: App.$secondary-color
-    font-family: App.$navbar-font
-    font-weight: 400
+#products-page
+    width: 100vw
+    min-height: 90vh
+
+    #products-header
+        background-color: inherit
+        color: App.$secondary-color
+        font-family: App.$navbar-font
+        font-weight: 400
+    
+    #products
+        display: grid
+        justify-content: center
+        grid-template-columns: repeat(auto-fill, 300px)
+        grid-gap: 20px
+        box-sizing: border-box
+        width: 100vw
+        padding: 0px 10vw
+        display: relative
+        list-style-position: inside
+        list-style-type: decimal-leading-zero
