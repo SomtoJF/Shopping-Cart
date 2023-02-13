@@ -16,6 +16,10 @@ const Item = (props) => {
 						<div>Photographer</div>
 						<div>{product.photographer}</div>
 					</li>
+					<li>
+						<div>Price</div>
+						<div>${product.price}</div>
+					</li>
 					<li>More Information...</li>
 				</ul>
 			</details>
