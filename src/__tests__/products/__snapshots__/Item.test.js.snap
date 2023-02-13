@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item Component displays an item accurately 1`] = `
+<div>
+  <li
+    class="product-item"
+  >
+    <img
+      alt="reach for the moon, aim for the stars"
+      src="www.somto.me/something.jpg"
+    />
+    <details>
+      <summary>
+        Product Information
+      </summary>
+      <ul>
+        <li>
+          <div>
+            Product
+          </div>
+          <div>
+            reach for the moon, aim for the stars
+          </div>
+        </li>
+        <li>
+          <div>
+            Photographer
+          </div>
+          <div>
+            SomtoJF
+          </div>
+        </li>
+        <li>
+          More Information...
+        </li>
+      </ul>
+    </details>
+  </li>
+</div>
+`;
