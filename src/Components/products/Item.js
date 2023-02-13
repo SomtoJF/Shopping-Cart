@@ -1,3 +1,5 @@
+import "../../styles/products/Item.sass";
+
 const Item = (props) => {
 	const product = props.product;
 	return (
