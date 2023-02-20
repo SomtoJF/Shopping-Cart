@@ -1,12 +1,18 @@
-import { createClient } from "pexels";
 import API from "./config";
-
-const client = createClient(`${API.key}`);
-const query = "Grey";
+const query = "SB Dunk Shoes";
 
 async function fetchProducts() {
-	let products = await client.photos.search({ query });
-	products = await products.photos.map((product, index) => {
+	let response = await fetch(
+		`https://api.pexels.com/v1/search?query=${query}`,
+		{
+			headers: {
+				Authorization: `${API.key}`,
+			},
+		}
+	);
+
+	response = await response.json();
+	const products = response.photos.map((product, index) => {
 		return {
 			sn: index + 1,
 			id: product.id,
@@ -20,6 +26,7 @@ async function fetchProducts() {
 			color: product.avg_color,
 		};
 	});
+	console.log(products);
 	return products;
 }
 

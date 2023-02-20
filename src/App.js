@@ -11,11 +11,9 @@ import fetchedProducts from "./API/FetchProducts";
 function App() {
 	const [products, setProducts] = useState([]);
 	useEffect(() => {
-		async function initializeProducts() {
-			const myProducts = await fetchedProducts();
-			setProducts(myProducts);
-		}
-		initializeProducts();
+		fetchedProducts().then((response) => {
+			setProducts(response);
+		});
 	}, []);
 	return (
 		<div className="App">
