@@ -1,5 +1,5 @@
 import API from "./config";
-const query = "SB Dunk Shoes";
+const query = "pop culture";
 
 async function fetchProducts() {
 	let response = await fetch(
