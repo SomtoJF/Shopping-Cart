@@ -26,7 +26,6 @@ async function fetchProducts() {
 			color: product.avg_color,
 		};
 	});
-	console.log(products);
 	return products;
 }
 
