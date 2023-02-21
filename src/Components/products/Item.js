@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../../styles/products/Item.sass";
 
 const Item = (props) => {
@@ -20,7 +21,9 @@ const Item = (props) => {
 						<div>Price</div>
 						<div>${product.price}</div>
 					</li>
-					<li>More Information...</li>
+					<li>
+						<Link to={"/products/" + product.id}>More Information</Link>
+					</li>
 				</ul>
 			</details>
 		</li>
