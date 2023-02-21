@@ -7,6 +7,7 @@ import Products from "./pages/Products";
 import { useState, useEffect } from "react";
 import NavLayer from "./Components/Nav/NavLayer";
 import fetchedProducts from "./API/FetchProducts";
+import Product from "./pages/Product";
 
 function App() {
 	const [products, setProducts] = useState([]);
@@ -24,6 +25,7 @@ function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="/products" element={<Products products={products} />} />
 					<Route path="/cart" element={<Cart />} />
+					<Route path="/products/:id" element={<Product />} />
 				</Routes>
 			</BrowserRouter>
 		</div>
