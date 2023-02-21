@@ -40,7 +40,11 @@ exports[`Item Component displays an item accurately 1`] = `
           </div>
         </li>
         <li>
-          More Information...
+          <a
+            href="/products/undefined"
+          >
+            More Information
+          </a>
         </li>
       </ul>
     </details>
