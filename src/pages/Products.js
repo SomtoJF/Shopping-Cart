@@ -3,7 +3,9 @@ import Item from "../Components/products/Item";
 import "../styles/products/Products.sass";
 
 const Products = ({ products }) => {
-	const items = products.map((item) => <Item product={item} key={item.sn} />);
+	const items = products.map((item) => (
+		<Item product={item} key={item.sn} breakdown={true} />
+	));
 
 	return (
 		<div id="products-page">
