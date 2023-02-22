@@ -1,15 +1,11 @@
 import API from "./config";
-const query = "pop culture";
 
-async function fetchProducts() {
-	let response = await fetch(
-		`https://api.pexels.com/v1/search?query=${query}`,
-		{
-			headers: {
-				Authorization: `${API.key}`,
-			},
-		}
-	);
+export default async function fetchProducts() {
+	let response = await fetch(`https://api.pexels.com/v1/curated`, {
+		headers: {
+			Authorization: `${API.key}`,
+		},
+	});
 
 	response = await response.json();
 	const products = response.photos.map((product, index) => {
@@ -29,4 +25,25 @@ async function fetchProducts() {
 	return products;
 }
 
-export default fetchProducts;
+async function fetchAProduct(id) {
+	let response = await fetch(`https://api.pexels.com/v1/photos/${id}`, {
+		headers: {
+			Authorization: `${API.key}`,
+		},
+	});
+
+	response = await response.json();
+	return {
+		id: response.id,
+		price: response.height,
+		photographer: response.photographer,
+		photographer_url: response.photographer_url,
+		poster_size: `${response.width} x ${response.height}`,
+		alt: response.alt,
+		src: response.src.landscape,
+		url: response.url,
+		color: response.avg_color,
+	};
+}
+
+export { fetchAProduct };
