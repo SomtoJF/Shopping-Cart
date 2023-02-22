@@ -11,6 +11,7 @@ import Product from "./pages/Product";
 
 function App() {
 	const [products, setProducts] = useState([]);
+	const [cart, setCart] = useState([]);
 	useEffect(() => {
 		fetchedProducts().then((response) => {
 			setProducts(response);
@@ -20,12 +21,12 @@ function App() {
 		<div className="App">
 			<BrowserRouter>
 				<Nav />
-				<NavLayer />
+				<NavLayer cartItems={cart.length} />
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/products" element={<Products products={products} />} />
 					<Route path="/cart" element={<Cart />} />
-					<Route path="/products/:id" element={<Product />} />
+					<Route path="/products/:id" element={<Product setCart={setCart} />} />
 				</Routes>
 			</BrowserRouter>
 		</div>
