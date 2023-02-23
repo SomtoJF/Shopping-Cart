@@ -105,6 +105,7 @@ const ExpandedItem = (props) => {
 								onClick={() => {
 									setQuantity(quantity - 1);
 								}}
+								disabled={quantity <= 1 ? true : false}
 							>
 								-
 							</button>
