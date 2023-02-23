@@ -10,7 +10,6 @@ const Product = ({ setCart, cart }) => {
 	useEffect(() => {
 		fetchAProduct(id).then((response) => {
 			setProduct(response);
-			console.log(response);
 		});
 	}, []);
 	return (
