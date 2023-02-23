@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
 import "../../styles/products/Item.sass";
+import { useState } from "react";
 
 const Item = (props) => {
 	const product = props.product;
 	const breakdown = props.breakdown;
+	const setCart = props.setCart;
+	const cart = props.cart;
 	if (breakdown === true) {
 		return <BrokenDownItem item={product} />;
 	} else {
-		return <ExpandedItem item={product} />;
+		return <ExpandedItem item={product} setCart={setCart} cart={cart} />;
 	}
 };
 
@@ -44,6 +47,16 @@ const BrokenDownItem = (props) => {
 
 const ExpandedItem = (props) => {
 	const product = props.item;
+	const setCart = props.setCart;
+	const cart = props.cart;
+	const [quantity, setQuantity] = useState(1);
+	const addToCart = (item, quantity) => {
+		item = { quantity: quantity, ...item };
+		let newCart = cart
+			.filter((cartItem) => cartItem.id !== item.id)
+			.concat(item);
+		setCart(newCart);
+	};
 	return (
 		<main id="a-product">
 			<img src={product.src} alt={product.alt} />
@@ -77,7 +90,34 @@ const ExpandedItem = (props) => {
 						</div>
 					</li>
 					<li>
-						<button>Add to Cart</button>
+						<button
+							type="button"
+							onClick={() => {
+								addToCart(product, quantity);
+							}}
+						>
+							Add to Cart
+						</button>
+
+						<div id="quantity-controls">
+							<button
+								type="button"
+								onClick={() => {
+									setQuantity(quantity - 1);
+								}}
+							>
+								-
+							</button>
+							<span> Qty {quantity} </span>
+							<button
+								type="button"
+								onClick={() => {
+									setQuantity(quantity + 1);
+								}}
+							>
+								+
+							</button>
+						</div>
 					</li>
 				</ul>
 			</section>
