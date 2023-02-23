@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Item Component displays an item accurately 1`] = `
+exports[`Item Component in 'products' page properly breaksdown/summarizes a product 1`] = `
 <div>
   <li
     class="product-item"
@@ -49,5 +49,93 @@ exports[`Item Component displays an item accurately 1`] = `
       </ul>
     </details>
   </li>
+</div>
+`;
+
+exports[`Item Component in the 'product' page expands a product when the breakdown prop is false 1`] = `
+<div>
+  <main
+    id="a-product"
+  >
+    <img
+      alt="reach for the moon, aim for the stars"
+      src="www.somto.me/something.jpg"
+    />
+    <section>
+      <ul>
+        <li>
+          <div>
+            Product
+          </div>
+          <div>
+            reach for the moon, aim for the stars
+          </div>
+        </li>
+        <li>
+          <div>
+            Photographer
+          </div>
+          <a>
+            SomtoJF
+          </a>
+        </li>
+        <li>
+          <div>
+            Price
+          </div>
+          <div>
+            $
+            1000
+          </div>
+        </li>
+        <li>
+          <div>
+            Poster Size
+          </div>
+          <div>
+            1000 x 1000
+             cm
+          </div>
+        </li>
+        <li>
+          <div>
+            Color
+          </div>
+          <div
+            style="background-color: rgb(255, 255, 255);"
+          >
+            #FFFFFF
+          </div>
+        </li>
+        <li>
+          <button
+            type="button"
+          >
+            Add to Cart
+          </button>
+          <div
+            id="quantity-controls"
+          >
+            <button
+              disabled=""
+              type="button"
+            >
+              -
+            </button>
+            <span>
+               Qty 
+              1
+               
+            </span>
+            <button
+              type="button"
+            >
+              +
+            </button>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
 </div>
 `;
