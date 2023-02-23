@@ -4,7 +4,7 @@ import { fetchAProduct } from "../API/FetchProducts";
 import Item from "../Components/products/Item";
 import "../styles/product/product.sass";
 
-const Product = () => {
+const Product = ({ setCart, cart }) => {
 	const { id } = useParams();
 	const [product, setProduct] = useState({});
 	useEffect(() => {
@@ -15,7 +15,7 @@ const Product = () => {
 	}, []);
 	return (
 		<div id="product-page">
-			<Item product={product} breakdown={false} />
+			<Item product={product} breakdown={false} setCart={setCart} cart={cart} />
 		</div>
 	);
 };

@@ -26,7 +26,10 @@ function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="/products" element={<Products products={products} />} />
 					<Route path="/cart" element={<Cart />} />
-					<Route path="/products/:id" element={<Product setCart={setCart} />} />
+					<Route
+						path="/products/:id"
+						element={<Product setCart={setCart} cart={cart} />}
+					/>
 				</Routes>
 			</BrowserRouter>
 		</div>
