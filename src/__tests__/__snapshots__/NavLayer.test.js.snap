@@ -8,21 +8,21 @@ exports[`Nav Overlay Matches Snapshot 1`] = `
     <ul>
       <li>
         <a
-          href="/"
+          href="/Shopping-Cart/"
         >
           HOME
         </a>
       </li>
       <li>
         <a
-          href="/products"
+          href="/Shopping-Cart/products"
         >
           PRODUCTS
         </a>
       </li>
       <li>
         <a
-          href="/cart"
+          href="/Shopping-Cart/cart"
         >
           CART
         </a>

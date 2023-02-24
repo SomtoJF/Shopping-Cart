@@ -34,12 +34,12 @@ exports[`Home Component renders correctly 1`] = `
       id="buttons"
     >
       <a
-        href="/products"
+        href="/Shopping-Cart/products"
       >
         Shop Now
       </a>
       <a
-        href="/cart"
+        href="/Shopping-Cart/cart"
       >
         Your Cart
       </a>
