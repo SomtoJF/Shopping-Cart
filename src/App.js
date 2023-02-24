@@ -23,14 +23,17 @@ function App() {
 				<Nav />
 				<NavLayer cartItems={cart.length} />
 				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/products" element={<Products products={products} />} />
+					<Route path="/Shopping-Cart/" element={<Home />} />
 					<Route
-						path="/cart"
+						path="/Shopping-Cart/products"
+						element={<Products products={products} />}
+					/>
+					<Route
+						path="/Shopping-Cart/cart"
 						element={<Cart setCart={setCart} cart={cart} />}
 					/>
 					<Route
-						path="/products/:id"
+						path="/Shopping-Cart/products/:id"
 						element={<Product setCart={setCart} cart={cart} />}
 					/>
 				</Routes>

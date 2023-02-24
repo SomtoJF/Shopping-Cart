@@ -21,8 +21,8 @@ const Home = () => {
 				enim imperdiet massa, quis faucibus nisi quam vel enim. Vestibulum.
 			</article>
 			<div id="buttons">
-				<Link to="/products">Shop Now</Link>
-				<Link to="/cart">Your Cart</Link>
+				<Link to="/Shopping-Cart/products">Shop Now</Link>
+				<Link to="/Shopping-Cart/cart">Your Cart</Link>
 			</div>
 		</main>
 	);

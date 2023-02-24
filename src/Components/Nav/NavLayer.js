@@ -7,16 +7,16 @@ const NavLayer = ({ cartItems }) => {
 		<aside id="layer">
 			<ul>
 				<li>
-					<Link to="/">HOME</Link>
+					<Link to="/Shopping-Cart/">HOME</Link>
 				</li>
 				<li>
-					<Link to="/products">PRODUCTS</Link>
+					<Link to="/Shopping-Cart/products">PRODUCTS</Link>
 				</li>
 				<li>
 					{cartItems > 0 ? (
-						<Link to="/cart">CART - {cartItems}</Link>
+						<Link to="/Shopping-Cart/cart">CART - {cartItems}</Link>
 					) : (
-						<Link to="/cart">CART</Link>
+						<Link to="/Shopping-Cart/cart">CART</Link>
 					)}
 				</li>
 			</ul>
