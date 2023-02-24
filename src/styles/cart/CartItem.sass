@@ -1,0 +1,48 @@
+@use "../../App"
+
+.cart-item
+    background-color: inherit
+    color: App.$secondary-color
+    display: grid
+    width: max(350px, 50%)
+    height: 30vh
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(4, 1fr)
+    grid-auto-flow: row
+    margin-bottom: 20px
+
+    button
+        @include App.link($width: 300%)
+        
+.cart-item>div:nth-child(n + 2)
+    font-weight: bold
+    box-sizing: border-box
+    padding: 0px 0px 0px 10px
+
+.cart-item>div:nth-child(n + 4)
+    grid-column: 1 / 4
+
+.cart-item>*
+    width: 100%
+    height: 100%
+    border: solid 1px App.$secondary-color
+
+.cart-image-container
+    grid-column: 1 / 3
+    grid-row: 1 / 3 
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow: hidden
+    img
+        height: 100%
+        width: auto
+
+@media only screen and (max-width: 300px) 
+    .cart-item
+        width: 90%
+        
+        img
+            width: 100%
+            height: auto
+
