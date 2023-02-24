@@ -37,7 +37,7 @@ const BrokenDownItem = (props) => {
 						<div>${product.price}</div>
 					</li>
 					<li>
-						<Link to={"/products/" + product.id}>More Information</Link>
+						<Link to={"/Shopping-Cart/products/" + product.id}>More Information</Link>
 					</li>
 				</ul>
 			</details>
