@@ -41,7 +41,7 @@ exports[`Item Component in 'products' page properly breaksdown/summarizes a prod
         </li>
         <li>
           <a
-            href="/products/undefined"
+            href="/Shopping-Cart/products/undefined"
           >
             More Information
           </a>
